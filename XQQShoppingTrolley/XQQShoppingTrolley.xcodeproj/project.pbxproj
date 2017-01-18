@@ -32,6 +32,7 @@
 		67938AFB1E2F131C003697EE /* sight_moments_mute_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67938AE21E2F131C003697EE /* sight_moments_mute_selected@2x.png */; };
 		67938AFC1E2F131C003697EE /* watch-tips-avatar2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67938AE31E2F131C003697EE /* watch-tips-avatar2@2x.png */; };
 		67938AFD1E2F131C003697EE /* watch-tips-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67938AE41E2F131C003697EE /* watch-tips-avatar@2x.png */; };
+		67938AFF1E2F14FD003697EE /* CreditCard_ShoppingBag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67938AFE1E2F14FD003697EE /* CreditCard_ShoppingBag@2x.png */; };
 		67DAE81B1E2DA6E7003F92D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DAE81A1E2DA6E7003F92D7 /* main.m */; };
 		67DAE81E1E2DA6E7003F92D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DAE81D1E2DA6E7003F92D7 /* AppDelegate.m */; };
 		67DAE8261E2DA6E7003F92D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DAE8251E2DA6E7003F92D7 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		67938AE21E2F131C003697EE /* sight_moments_mute_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sight_moments_mute_selected@2x.png"; sourceTree = "<group>"; };
 		67938AE31E2F131C003697EE /* watch-tips-avatar2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watch-tips-avatar2@2x.png"; sourceTree = "<group>"; };
 		67938AE41E2F131C003697EE /* watch-tips-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watch-tips-avatar@2x.png"; sourceTree = "<group>"; };
+		67938AFE1E2F14FD003697EE /* CreditCard_ShoppingBag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreditCard_ShoppingBag@2x.png"; sourceTree = "<group>"; };
 		67DAE8161E2DA6E7003F92D7 /* XQQShoppingTrolley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQQShoppingTrolley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DAE81A1E2DA6E7003F92D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67DAE81C1E2DA6E7003F92D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		67938ACB1E2F131C003697EE /* 微信官方 */ = {
 			isa = PBXGroup;
 			children = (
+				67938AFE1E2F14FD003697EE /* CreditCard_ShoppingBag@2x.png */,
 				67938ACC1E2F131C003697EE /* AddGroupMemberBtn.png */,
 				67938ACD1E2F131C003697EE /* AddGroupMemberBtn@2x.png */,
 				67938ACE1E2F131C003697EE /* AddGroupMemberBtnHL.png */,
@@ -319,6 +322,7 @@
 				67938AEF1E2F131C003697EE /* FriendsSendsPicturesNumberIcon@2x.png in Resources */,
 				67938AFD1E2F131C003697EE /* watch-tips-avatar@2x.png in Resources */,
 				67938AFB1E2F131C003697EE /* sight_moments_mute_selected@2x.png in Resources */,
+				67938AFF1E2F14FD003697EE /* CreditCard_ShoppingBag@2x.png in Resources */,
 				67938AF41E2F131C003697EE /* GameCenterNewAppTag@2x.png in Resources */,
 				67938AEA1E2F131C003697EE /* AlbumAddBtnHL@2x.png in Resources */,
 				67938AEE1E2F131C003697EE /* FriendsSendsPicturesArtworkIcon@2x.png in Resources */,

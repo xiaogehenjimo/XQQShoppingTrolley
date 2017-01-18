@@ -85,7 +85,7 @@
         
         //商品的imageView
         UIImageView * commodityImageView = [[UIImageView alloc]init];
-        commodityImageView.image = XQQImageName(@"watch-tips-avatar");
+        commodityImageView.image = XQQImageName(@"CreditCard_ShoppingBag");
         
         [self.backView addSubview:commodityImageView];
         self.commodityImageView = commodityImageView;
