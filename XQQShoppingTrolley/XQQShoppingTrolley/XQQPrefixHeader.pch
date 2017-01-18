@@ -1,0 +1,55 @@
+//
+//  XQQPrefixHeader.pch
+//  XQQShoppingTrolley
+//
+//  Created by XQQ on 2017/1/17.
+//  Copyright © 2017年 UIP. All rights reserved.
+//
+
+
+
+#ifndef XQQPrefixHeader_h
+#define XQQPrefixHeader_h
+#ifdef __OBJC__
+
+/**将数据写到桌面plist*/
+#define XQQWriteToPlist(data,fileName) [data writeToFile:[NSString stringWithFormat:@"/Users/gl/Desktop/%@.plist",fileName] atomically:YES];
+
+/*日志相关*/
+#ifdef DEBUG
+#define XQQLog(...)  NSLog(__VA_ARGS__)
+#else
+#define XQQLog(...)
+#endif
+
+#define XQQLogFunc XQQLog(@"%s", __func__);
+
+/*颜色相关*/
+#define XQQColorAlpa(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define XQQColor(r,g,b)         XQQColorAlpa((r),(g),(b),255)
+#define XQQRandomColor          XQQColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+#define XQQSingleColor(r)  XQQColor((r),(r),(r))
+#define XQQBGColor       XQQSingleColor(214)
+
+#define iphoneWidth  [UIScreen mainScreen].bounds.size.width
+#define iphoneHeight [UIScreen mainScreen].bounds.size.height
+
+
+
+#define kDocumentsPath                      [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0]
+/*图片名字*/
+#define XQQImageName(name)  [UIImage imageNamed:(name)]
+
+
+//链接
+#define XQQCommonURL @"https://api.budejie.com/api/api_open.php"
+
+
+
+#import "UIView+XQQAdd.h"
+
+
+#endif
+
+
+#endif /* XQQPCH_h */
