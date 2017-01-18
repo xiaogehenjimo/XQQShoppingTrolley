@@ -85,7 +85,7 @@
         
         //商品的imageView
         UIImageView * commodityImageView = [[UIImageView alloc]init];
-        commodityImageView.image = XQQImageName(@"CreditCard_ShoppingBag");
+        commodityImageView.image = XQQImageName(@"watch-tips-avatar");
         
         [self.backView addSubview:commodityImageView];
         self.commodityImageView = commodityImageView;
@@ -187,10 +187,10 @@
 /** 左侧选择的按钮点击了 */
 - (void)leftSelBtnDidPress:(UIButton*)button{
     if (self.isLeftBtnSel) {
-        [self.leftSelBtn setImage:XQQImageName(@"GameCenterNewWhite") forState:UIControlStateNormal];
+        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_select") forState:UIControlStateNormal];
         self.isLeftBtnSel = NO;
     }else{//245  61  28
-        [self.leftSelBtn setImage:XQQImageName(@"GameCenterNewAppTag") forState:UIControlStateNormal];
+        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_selected") forState:UIControlStateNormal];
         self.isLeftBtnSel = YES;
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(leftSelBtnDidPress:cell:isSel:)]) {
@@ -222,10 +222,10 @@
 - (void)setDataModel:(XQQCommodityModel *)dataModel{
     _dataModel = dataModel;
     if (dataModel.isSelected) {
-        [self.leftSelBtn setImage:XQQImageName(@"GameCenterNewAppTag") forState:UIControlStateNormal];
+        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_selected") forState:UIControlStateNormal];
         self.isLeftBtnSel = YES;
     }else{
-        [self.leftSelBtn setImage:XQQImageName(@"GameCenterNewWhite") forState:UIControlStateNormal];
+        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_select") forState:UIControlStateNormal];
         self.isLeftBtnSel = NO;
     }
     self.commodityNameLabel.text = dataModel.commodityName;
