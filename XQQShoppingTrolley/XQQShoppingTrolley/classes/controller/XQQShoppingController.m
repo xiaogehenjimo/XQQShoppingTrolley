@@ -83,17 +83,13 @@
 }
 /*更新价格*/
 - (void)updatePrice{
-    [self.bottomView updateArr:self.selectedArr];
-    //判断是否是全选状态
+    //更新底部的价格
+    [self.bottomView updateArr:self.selectedArr dataArr:self.dataArr];
+    //判断每个店铺是否是全选状态
     for (NSInteger i = 0; i < self.dataArr.count; i ++) {
         XQQShopModel * shopModel = self.dataArr[i];
         NSMutableArray * selectArr = self.selectedArr[i];
-        if (shopModel.commodityArr.count == selectArr.count) {
-            self.bottomView.isAllSelected = YES;
-        }else{
-            self.bottomView.isAllSelected = NO;
-            break;
-        }
+        shopModel.isAllSelected = shopModel.commodityArr.count == selectArr.count ? YES : NO;
     }
 }
 
@@ -115,8 +111,6 @@
     }
     [self updateData];
 }
-
-
 
 #pragma mark - xqq_shopBottomViewDelegate
 /*下方全选按钮点击了*/
@@ -294,9 +288,9 @@
                 }
             }
             //删除UI
-            [self updatePrice];//更新下方总价格
-            //[self updateData];
-            [self.myTableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+//            [self updatePrice];//更新下方总价格
+            [self updateData];
+//            [self.myTableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
         }];
         UIAlertAction * cacelAct = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:alertAct];

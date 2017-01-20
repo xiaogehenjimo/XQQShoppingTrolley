@@ -19,7 +19,7 @@
 /** 代理 */
 @property(nonatomic, assign)  id<xqq_shopBottomViewDelegate>  delegate;
 
-- (void)updateArr:(NSArray*)selectedArr;
+- (void)updateArr:(NSArray*)selectedArr dataArr:(NSArray*)dataArr;
 /** 是否是全选 */
 @property(nonatomic, assign)  BOOL   isAllSelected;
 

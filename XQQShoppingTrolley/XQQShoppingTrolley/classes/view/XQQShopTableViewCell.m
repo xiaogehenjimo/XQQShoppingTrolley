@@ -91,6 +91,8 @@
         self.commodityImageView = commodityImageView;
         
         
+        
+        
         //商品标题label
         UILabel * commodityNameLabel = [[UILabel alloc]init];
         //commodityNameLabel.text = @"[金秋爆款]羽绒服 男士款";

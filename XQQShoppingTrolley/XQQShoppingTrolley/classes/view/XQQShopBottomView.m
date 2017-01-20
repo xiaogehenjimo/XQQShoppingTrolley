@@ -8,6 +8,7 @@
 
 #import "XQQShopBottomView.h"
 #import "XQQCommodityModel.h"
+#import "XQQShopModel.h"
 
 #define selectBtnWH 30
 #define boardWidth 10
@@ -65,10 +66,16 @@
     return self;
 }
 
-- (void)updateArr:(NSArray*)selectedArr{
+- (void)updateArr:(NSArray*)selectedArr dataArr:(NSArray *)dataArr{
     //计算价格
     CGFloat sumPrice = 0;
     NSInteger sumCount = 0;//选中商品总数
+    NSInteger allCount = 0;//总的商品数量
+    
+    for (XQQShopModel * shopModel in dataArr) {
+        allCount += shopModel.commodityArr.count;
+    }
+    
     for (NSArray * selArr in selectedArr) {
         NSInteger count = selArr.count;
         sumCount += count;
@@ -89,6 +96,8 @@
     NSString * accountBtnTitle = sumCount > 0 ? [NSString stringWithFormat:@"去结算(%ld)",sumCount]:@"去结算";
     
     [self.accountBtn setTitle:accountBtnTitle forState:UIControlStateNormal];
+
+    self.isAllSelected = sumCount == allCount ? YES:NO;
 }
 
 /** 去结算按钮点击了 */
