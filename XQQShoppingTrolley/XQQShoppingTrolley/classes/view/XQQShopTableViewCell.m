@@ -76,7 +76,6 @@
         
         //左侧选中的按钮
         UIButton * leftSelBtn = [[UIButton alloc]init];
-//        [leftSelBtn setImage:XQQImageName(@"GameCenterNewWhite") forState:UIControlStateNormal];
         [leftSelBtn addTarget:self action:@selector(leftSelBtnDidPress:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.backView addSubview:leftSelBtn];
@@ -90,12 +89,8 @@
         [self.backView addSubview:commodityImageView];
         self.commodityImageView = commodityImageView;
         
-        
-        
-        
         //商品标题label
         UILabel * commodityNameLabel = [[UILabel alloc]init];
-        //commodityNameLabel.text = @"[金秋爆款]羽绒服 男士款";
         commodityNameLabel.textColor = [UIColor blackColor];
         commodityNameLabel.font = [UIFont systemFontOfSize:18];
         [self.backView addSubview:commodityNameLabel];
@@ -103,7 +98,6 @@
         
         //商品详情描述label
         UILabel * commodicyDetailLabel = [[UILabel alloc]init];
-        commodicyDetailLabel.text = @"fjehfehfeiofheiohfhehfehfoehfoehfehfiohfiiefihefhiehfiei";
         commodicyDetailLabel.font = [UIFont systemFontOfSize:15];
         commodicyDetailLabel.textColor = [UIColor blackColor];
         commodicyDetailLabel.numberOfLines = 0;
@@ -112,7 +106,6 @@
         
         //价格label
         UILabel * priceLabel = [[UILabel alloc]init];
-        //priceLabel.text = @"998.55";//245  61  28
         priceLabel.textColor = XQQColor(245, 61, 28);
         priceLabel.font = [UIFont boldSystemFontOfSize:18];
         priceLabel.textAlignment = NSTextAlignmentRight;
@@ -129,7 +122,6 @@
         
         //中间数量label
         UILabel * countLabel = [[UILabel alloc]init];
-        //countLabel.text = @"1";
         countLabel.textAlignment = NSTextAlignmentCenter;
         countLabel.textColor = [UIColor blackColor];
         countLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -167,7 +159,7 @@
      self.leftSelBtn.frame = CGRectMake(boardWidth, (backHeight - leftSelBtnWH)*.5, leftSelBtnWH, leftSelBtnWH);
     
      self.commodityImageView.frame = CGRectMake(self.leftSelBtn.xqq_right + boardWidth, boardWidth*.5, backHeight - boardWidth, backHeight - boardWidth);
-    
+
      self.priceLabel.frame = CGRectMake(backWidth - 80 - boardWidth, boardWidth, 80, 30);
     
      self.commodityNameLabel.frame = CGRectMake(self.commodityImageView.xqq_right + boardWidth, boardWidth, backWidth - 5*boardWidth - self.leftSelBtn.xqq_width - self.commodityImageView.xqq_width - self.priceLabel.xqq_width, 25);
@@ -180,19 +172,17 @@
      self.minusBtn.frame = CGRectMake(self.countLabel.xqq_x - boardWidth*.5 - smallBtnWH, self.addBtn.xqq_y, smallBtnWH, smallBtnWH);
     
      self.commodityDetailLabel.frame = CGRectMake(self.commodityImageView.xqq_right + boardWidth, self.commodityNameLabel.xqq_bottom + boardWidth*.5,backWidth - 5.5 * boardWidth - self.leftSelBtn.xqq_width - self.commodityImageView.xqq_width - smallBtnWH*3, backHeight - boardWidth * 2 - self.commodityNameLabel.xqq_height);
-    
 }
-
 
 #pragma mark - activity
 
 /** 左侧选择的按钮点击了 */
 - (void)leftSelBtnDidPress:(UIButton*)button{
     if (self.isLeftBtnSel) {
-        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_select") forState:UIControlStateNormal];
+        [self setBtnImage:@"sight_moments_mute_select" button:self.leftSelBtn];
         self.isLeftBtnSel = NO;
     }else{//245  61  28
-        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_selected") forState:UIControlStateNormal];
+        [self setBtnImage:@"sight_moments_mute_selected" button:self.leftSelBtn];
         self.isLeftBtnSel = YES;
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(leftSelBtnDidPress:cell:isSel:)]) {
@@ -224,16 +214,21 @@
 - (void)setDataModel:(XQQCommodityModel *)dataModel{
     _dataModel = dataModel;
     if (dataModel.isSelected) {
-        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_selected") forState:UIControlStateNormal];
+        [self setBtnImage:@"sight_moments_mute_selected" button:self.leftSelBtn];
         self.isLeftBtnSel = YES;
     }else{
-        [self.leftSelBtn setImage:XQQImageName(@"sight_moments_mute_select") forState:UIControlStateNormal];
+        [self setBtnImage:@"sight_moments_mute_select" button:self.leftSelBtn];
         self.isLeftBtnSel = NO;
     }
     self.commodityNameLabel.text = dataModel.commodityName;
     self.countLabel.text = [NSString stringWithFormat:@"%ld",dataModel.commCount];
     self.priceLabel.text = dataModel.commodityPrice;
     self.commodityDetailLabel.text = dataModel.commodityDescription;
+}
+
+/** 设置按钮图片 */
+- (void)setBtnImage:(NSString*)imageName button:(UIButton*)button{
+    [button setImage:XQQImageName(imageName) forState:UIControlStateNormal];
 }
 
 @end

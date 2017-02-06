@@ -72,7 +72,6 @@
     [self.view addSubview:_bottomView];
 }
 
-
 #pragma mark - activity
 
 /*更新数据 tableView的 还有下方价格*/
@@ -302,6 +301,19 @@
 - (NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
+//- (NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    UITableViewRowAction * action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+//        
+//    }];
+//    action1.backgroundColor = [UIColor redColor];
+//    
+//    UITableViewRowAction * action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+//        
+//    }];
+//    action2.backgroundColor = [UIColor grayColor];
+//    return @[action1,action2];
+//}
 
 #pragma mark - setter&getter
 

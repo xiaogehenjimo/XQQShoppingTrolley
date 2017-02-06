@@ -45,6 +45,7 @@
 		67DAF8801E2DF486003F92D7 /* xqq_shop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67DAF87F1E2DF486003F92D7 /* xqq_shop.plist */; };
 		67DAF8831E2DF56C003F92D7 /* XQQCommodityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DAF8821E2DF56C003F92D7 /* XQQCommodityModel.m */; };
 		67DAF8861E2DFB87003F92D7 /* XQQShopBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DAF8851E2DFB87003F92D7 /* XQQShopBottomView.m */; };
+		67F864751E3D872E00823280 /* XQQFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F864741E3D872E00823280 /* XQQFrameTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		67DAF8821E2DF56C003F92D7 /* XQQCommodityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQQCommodityModel.m; sourceTree = "<group>"; };
 		67DAF8841E2DFB87003F92D7 /* XQQShopBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQQShopBottomView.h; sourceTree = "<group>"; };
 		67DAF8851E2DFB87003F92D7 /* XQQShopBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQQShopBottomView.m; sourceTree = "<group>"; };
+		67F864731E3D872E00823280 /* XQQFrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQQFrameTool.h; sourceTree = "<group>"; };
+		67F864741E3D872E00823280 /* XQQFrameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQQFrameTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,8 @@
 		67DAE8441E2DB64A003F92D7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				67F864731E3D872E00823280 /* XQQFrameTool.h */,
+				67F864741E3D872E00823280 /* XQQFrameTool.m */,
 				67DAE8451E2DB64A003F92D7 /* UIView+XQQAdd.h */,
 				67DAE8461E2DB64A003F92D7 /* UIView+XQQAdd.m */,
 			);
@@ -347,6 +352,7 @@
 				67DAE8431E2DACDB003F92D7 /* XQQShopModel.m in Sources */,
 				67DAE83D1E2DA9BA003F92D7 /* XQQShoppingController.m in Sources */,
 				67DAF8831E2DF56C003F92D7 /* XQQCommodityModel.m in Sources */,
+				67F864751E3D872E00823280 /* XQQFrameTool.m in Sources */,
 				67DAE8471E2DB64A003F92D7 /* UIView+XQQAdd.m in Sources */,
 				67DAE8391E2DA74D003F92D7 /* mainViewController.m in Sources */,
 				67DAE81E1E2DA6E7003F92D7 /* AppDelegate.m in Sources */,

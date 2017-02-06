@@ -41,13 +41,8 @@
 #define XQQImageName(name)  [UIImage imageNamed:(name)]
 
 
-//链接
-#define XQQCommonURL @"https://api.budejie.com/api/api_open.php"
-
-
-
 #import "UIView+XQQAdd.h"
-
+#import "XQQFrameTool.h"
 
 #endif
 
